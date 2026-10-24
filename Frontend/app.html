@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lion Pick Up</title>
+  <meta name="theme-color" content="#0B6E73">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%230B6E73'/%3E%3Ccircle cx='0' cy='0' r='14' fill='%23F2B705'/%3E%3Ccircle cx='48' cy='48' r='14' fill='%23F2B705'/%3E%3Cpath d='M24 9 L39 24 L24 39 L9 24 Z' fill='%23F1F6F5'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="barra">
+    <a class="marca" href="app.html#explorar"><span class="marca-sello" aria-hidden="true"></span>lion pick up</a>
+    <nav class="tabs" aria-label="Secciones">
+      <a href="#explorar" data-vista="explorar">Explorar</a>
+      <a href="#pedidos" data-vista="pedidos">Mis pedidos</a>
+      <a href="#ayuda" data-vista="ayuda">Ayuda</a>
+    </nav>
+    <span class="espacio"></span>
+    <a id="ir-negocio" class="btn btn-fantasma btn-chico oculto" href="negocio.html">Mi negocio</a>
+    <button id="btn-carrito" class="btn btn-secundario btn-icono boton-carrito" aria-label="Abrir carrito"></button>
+    <button id="btn-salir" class="btn btn-fantasma btn-icono" aria-label="Cerrar sesión"></button>
+  </header>
+
+  <main id="vista" class="contenedor" tabindex="-1"></main>
+  <div id="barra-carrito" class="barra-carrito oculto"></div>
+
+  <nav class="nav-inferior" aria-label="Secciones">
+    <a href="#explorar" data-vista="explorar"></a>
+    <a href="#pedidos" data-vista="pedidos"></a>
+    <a href="#ayuda" data-vista="ayuda"></a>
+  </nav>
+
+  <div id="pie"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/demo-local.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/cliente.js"></script>
+</body>
+</html>

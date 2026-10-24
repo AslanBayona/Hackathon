@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lion Pick Up</title>
+  <meta name="description" content="Pide en los locales del campus o aparta con estudiantes que venden hoy. Recoges sin hacer fila.">
+  <meta name="theme-color" content="#0B6E73">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%230B6E73'/%3E%3Ccircle cx='0' cy='0' r='14' fill='%23F2B705'/%3E%3Ccircle cx='48' cy='48' r='14' fill='%23F2B705'/%3E%3Cpath d='M24 9 L39 24 L24 39 L9 24 Z' fill='%23F1F6F5'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="barra">
+    <a class="marca" href="index.html"><span class="marca-sello" aria-hidden="true"></span>lion pick up</a>
+  </header>
+
+  <main class="portada">
+    <section class="portada-texto">
+      <h1>La comida del campus, sin hacer fila.</h1>
+      <p>Pide en los locales del campus o aparta con estudiantes que venden hoy. Llegas, recoges y listo.</p>
+      <ul class="portada-puntos">
+        <li><span id="i1"></span><span><strong>Locales:</strong> pagas en la app y recoges cuando esté listo.</span></li>
+        <li><span id="i2"></span><span><strong>Estudiantes:</strong> apartas gratis y pagas al recoger.</span></li>
+        <li><span id="i3"></span><span><strong>Vendedores verificados</strong> por IA y por una persona.</span></li>
+      </ul>
+      <div class="portada-arte" aria-hidden="true"></div>
+    </section>
+
+    <section class="portada-acceso">
+      <div id="aviso-config" class="aviso error oculto"></div>
+      <div id="aviso-sesion" class="aviso info oculto">Tu sesión terminó. Vuelve a entrar.</div>
+      <section id="acceso-rapido" class="tarjeta-acceso oculto" aria-labelledby="titulo-rapido">
+        <h2 id="titulo-rapido">Probar la demo</h2>
+        <p class="suave" style="margin:.35rem 0 1rem">Entra con un toque como cualquiera de estos usuarios.</p>
+        <div class="rapido" id="botones-rapido"></div>
+        <p class="aviso error oculto" id="error-rapido" style="margin-top:.75rem"></p>
+      </section>
+      <div class="tarjeta-acceso">
+        <div class="pestanas" role="tablist">
+          <button id="tab-entrar" role="tab" aria-selected="true" aria-controls="form-entrar">Entrar</button>
+          <button id="tab-crear" role="tab" aria-selected="false" aria-controls="form-crear">Crear cuenta</button>
+        </div>
+
+        <form id="form-entrar" class="formulario" novalidate>
+          <label class="campo"><span>Correo</span><input type="email" name="email" autocomplete="email" required></label>
+          <label class="campo"><span>Contraseña</span><input type="password" name="password" autocomplete="current-password" required></label>
+          <p class="aviso error oculto" data-error></p>
+          <button class="btn btn-primario btn-bloque" type="submit">Entrar</button>
+        </form>
+
+        <form id="form-crear" class="formulario oculto" novalidate>
+          <label class="campo"><span>Nombre</span><input type="text" name="nombre" autocomplete="name" maxlength="60" required></label>
+          <label class="campo"><span>Correo</span><input type="email" name="email" autocomplete="email" required>
+            <small>Si vas a vender como estudiante, usa tu correo institucional.</small></label>
+          <label class="campo"><span>Contraseña</span><input type="password" name="password" autocomplete="new-password" minlength="8" required>
+            <small>Mínimo 8 caracteres, con al menos una letra y un número.</small></label>
+          <fieldset class="opciones" style="border:0;padding:0;margin:0">
+            <legend class="campo" style="margin-bottom:.35rem"><span>¿Qué quieres hacer?</span></legend>
+            <label class="opcion"><input type="radio" name="rol" value="cliente" checked><span><strong>Pedir comida</strong><small>Explora, pide y recoge en el campus.</small></span></label>
+            <label class="opcion"><input type="radio" name="rol" value="negocio"><span><strong>Vender</strong><small>Para locales del campus y estudiantes que venden.</small></span></label>
+          </fieldset>
+          <details class="desplegable">
+            <summary>Soy del equipo de Lion Pick Up</summary>
+            <label class="campo"><span>Código de administrador</span><input type="password" name="codigo_admin" autocomplete="off"></label>
+          </details>
+          <label class="casilla"><input type="checkbox" name="acepta_terminos" required>
+            <span>Leí y acepto el <a href="legal.html" target="_blank" rel="noopener">aviso de privacidad y los términos</a>.</span></label>
+          <p class="aviso error oculto" data-error></p>
+          <button class="btn btn-primario btn-bloque" type="submit">Crear cuenta</button>
+        </form>
+      </div>
+
+    </section>
+  </main>
+
+  <div id="pie"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/demo-local.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/inicio.js"></script>
+</body>
+</html>

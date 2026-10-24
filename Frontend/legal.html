@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Aviso de privacidad y términos de Lion Pick Up</title>
+  <meta name="theme-color" content="#0B6E73">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%230B6E73'/%3E%3Ccircle cx='0' cy='0' r='14' fill='%23F2B705'/%3E%3Ccircle cx='48' cy='48' r='14' fill='%23F2B705'/%3E%3Cpath d='M24 9 L39 24 L24 39 L9 24 Z' fill='%23F1F6F5'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="barra">
+    <a class="marca" href="index.html"><span class="marca-sello" aria-hidden="true"></span>lion pick up</a>
+  </header>
+  <main class="contenedor legal">
+    <h1>Aviso de privacidad y términos</h1>
+    <p style="margin-top:1rem">Lion Pick Up es un proyecto de demostración creado para un hackathon de AWS. No está afiliado ni respaldado por ninguna universidad o marca. Los pagos son simulados. Este texto es un borrador pendiente de revisión legal.</p>
+
+    <h2 id="privacidad">Qué datos pedimos y para qué</h2>
+    <ul>
+      <li><strong>Cuenta:</strong> nombre, correo y contraseña. La contraseña se guarda cifrada con un algoritmo de un solo sentido; nadie del equipo puede leerla.</li>
+      <li><strong>Pedidos:</strong> lo que pides, el horario, el punto de encuentro y el método de pago que eliges. No pedimos ni guardamos datos de tarjetas.</li>
+      <li><strong>Verificación de vendedores:</strong> una imagen de un documento y el nombre del responsable. La imagen se guarda cifrada en un almacenamiento privado; la revisan una IA (Amazon Bedrock), que solo da una recomendación, y una persona del equipo. En la demo pedimos usar documentos de muestra.</li>
+      <li><strong>Soporte:</strong> los mensajes que envías a la asistente o en un reporte, para resolver tu caso.</li>
+    </ul>
+    <p>Usamos estos datos solo para operar la app. No los vendemos ni los compartimos con terceros fuera de los servicios de Amazon Web Services que alojan la app. Puedes pedir que borremos tu cuenta y tus datos escribiendo al equipo desde Ayuda.</p>
+
+    <h2 id="cookies">Cookies y almacenamiento en tu dispositivo</h2>
+    <ul>
+      <li><strong>Estrictamente necesario:</strong> tu sesión se guarda en el almacenamiento de la pestaña y se borra al cerrarla. También guardamos tu elección de privacidad. Sin esto la app no funciona.</li>
+      <li><strong>Preferencias (opcional):</strong> solo si lo aceptas, recordamos tu carrito y tus filtros en este dispositivo.</li>
+      <li><strong>Sin publicidad ni rastreo:</strong> no usamos cookies de analítica, publicidad ni redes sociales.</li>
+      <li><strong>Tipografías:</strong> las fuentes se cargan desde Google Fonts, que recibe la dirección IP de tu dispositivo al descargarlas.</li>
+    </ul>
+    <p>Puedes cambiar tu elección cuando quieras con el enlace “Preferencias de cookies” al pie de cada página.</p>
+
+    <h2 id="terminos">Términos de uso</h2>
+    <ul>
+      <li>Los locales del campus cobran dentro de la app. En esta demo el cobro es simulado.</li>
+      <li>Con estudiantes que venden, la app no procesa ni garantiza el pago: el cliente aparta y paga en persona. El pedido se libera con el código de 6 dígitos del cliente.</li>
+      <li>Los encuentros deben ser en los puntos del campus que ofrece la app. No compartas datos personales ni contraseñas.</li>
+      <li>Cada vendedor declara cumplir las reglas de la universidad y las normas sanitarias aplicables a los alimentos que vende.</li>
+      <li>Lion Pick Up cobra al vendedor una comisión por producto vendido: 8% a locales (descontada del pago) y 5% a estudiantes (saldo por liquidar). El cliente no paga comisión.</li>
+      <li>Podemos suspender cuentas que hagan mal uso de la plataforma, por ejemplo apartados que nunca se recogen o reportes falsos.</li>
+    </ul>
+  </main>
+  <div id="pie"></div>
+  <script src="js/config.js"></script>
+  <script src="js/demo-local.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script>document.getElementById("pie").replaceWith(UI.pie());</script>
+</body>
+</html>
