@@ -1,2 +1,0 @@
-# Hackathon
-Equipo Nexus
